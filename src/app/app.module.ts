@@ -16,6 +16,8 @@ import { routing } from './app.routing';
 import { UsersModule } from './users/users.module';
 import { Angular2TokenService } from 'angular2-token';
 import { FormService } from './shared/form.service';
+import { QuestionService } from './shared/question.service';
+import { AnswerService } from './shared/answer.service';
 
 @NgModule({
   declarations: [
@@ -33,11 +35,13 @@ import { FormService } from './shared/form.service';
     AnswersModule,
     RouterModule,
     routing,
-    UsersModule,
+    UsersModule
   ],
   providers: [
     Angular2TokenService,
-    FormService
+    FormService,
+    QuestionService,
+    AnswerService
   ],
   bootstrap: [AppComponent]
 })
